@@ -4,10 +4,7 @@ A simple responsive profile card built using semantic HTML and CSS. It includes 
 
 ## Features
 - Semantic HTML5 structure
-- Centered card layout using Flexbox
 - Responsive design with media queries
-- Hover effects for interactivity
-- Includes GitHub and LinkedIn links
 - Uses Font Awesome for social icons (`css/all.min.css`)
 
 ## How to Run
