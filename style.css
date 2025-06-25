@@ -11,10 +11,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .card-container {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   padding: 30px;
   position: relative;
   display: flex;
@@ -24,6 +26,12 @@ body {
   border-radius: 10px;
   background: #ecf0f3;
   box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-6px);
+  box-shadow: -5px -5px 12px #ffffff, 5px 5px 10px #ceced1;
 }
 
 .avatar-wrap {
@@ -82,23 +90,30 @@ body {
   font-size: 23px;
   font-weight: 500;
   color: #31344b;
+  text-align: center;
+  word-break: break-word;
 }
 
 .tagline {
   font-size: 16px;
   font-weight: 400;
   color: #44476a;
+  text-align: center;
+  padding: 0 10px;
 }
 
 .networks {
   margin: 30px 0 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .networks a {
   height: 40px;
   width: 40px;
   display: inline-flex;
-  margin: 0 5px;
+  margin: 5px;
   text-decoration: none;
   position: relative;
   border-radius: 50%;
@@ -136,11 +151,44 @@ body {
   color: #000000;
 }
 
-.card-container {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+/* Mobile responsive */
+@media screen and (max-width: 400px) {
+  .card-container {
+    padding: 20px;
+  }
 
-.card-container:hover {
-  transform: translateY(-6px);
-  box-shadow: -5px -5px 12px #ffffff, 5px 5px 10px #ceced1;
+  .avatar-wrap {
+    height: 120px;
+    width: 120px;
+  }
+
+  .avatar-inner {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+
+  .username {
+    font-size: 20px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  .btn {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+
+  .networks a {
+    height: 36px;
+    width: 36px;
+  }
+
+  .networks a i {
+    line-height: 36px;
+    font-size: 16px;
+  }
 }
